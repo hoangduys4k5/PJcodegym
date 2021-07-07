@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flip-Flop</title>
+    <link type="text/css" rel="stylesheet" href="Styles/GameStyles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
+" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js
+"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css
+" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+</head>
+<body>
+    <h1 class="game-title">Flip-Flop</h1>
+     <button type="button" class="btn btn-outline-dark" onclick="thoatgame()">Thoát game</button>
+
+    <div class="overlay-text visible">
+        Click để bắt đầu
+    </div>
+    <div id="gameOverText" class="overlay-text">
+       Chúc bạn may mắn lần sau
+
+        <span class="overlay-text-small">Click để chơi lại</span>
+    </div>
+    <div id="winText" class="overlay-text">
+       Chúc mừng bạn đã được giảm 10%<span style=font-size:30>khuyến mãi áp dụng cho 1 tài khoản</span>
+        <span class="overlay-text-small">Click để chơi lại</span>
+           </div>
+
+    <div id="gameMainBlock" class="game-container">
+        <div id="gameInfoBlock" class="game-info-block">
+            <div class="game-info">
+                 <span id="Timer"></span>                  
+            </div>
+            <div class="game-info">
+                 <span id="Flips"></span>
+            </div>
+        </div>
+</div>
+    </div>
+ 
+    <script type="text/javascript" src="Scripts/Controllers.js"></script>
+    <script type="text/javascript" src="Scripts/FlipFlop.js"></script>
+</body>
+
+</html>

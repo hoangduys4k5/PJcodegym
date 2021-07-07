@@ -1,0 +1,98 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
+" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js
+"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css
+" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.min.js">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<!-- Nhúng file CSS -->
+<link rel="stylesheet" href="css/cafe.css">
+<link rel="stylesheet" href="css2/cafe.css">
+
+</head>
+<body>
+		<div class=dangky>
+<!-- Nhúng file JavaScript -->
+<script language="javascript" src="kiemtra.js"></script>
+<div class=bg>
+<form action="" method="POST" onsubmit="return validate()">
+<br>
+<br>
+<div class="register">
+<h1>Đăng ký</h1>
+<p>Vui lòng điền thông tin để đăng ký</p>
+<hr>
+
+<label for="username"><b>Tên đăng nhập (*) </b></label>
+<input type="text" placeholder="Họ và tên" name="username" id="username">
+<label for="password"><b>Mật khẩu (*)</b></label>
+<input type="password" placeholder="******" name="password" id="password">
+<label for="password-repeat"><b>Nhập lại mật khẩu (*)</b></label>
+<input type="password" placeholder="******" name="password-repeat" id="password-repeat">
+<label for="email"><b>Nhập email</b></label><br>
+<input type="text" placeholder="a@bc.com" name="email" id="email">
+<label for="email"><b>Nhập số điện thoại</b></label><br>
+<input type="text" placeholder="SDT" name="sdt" id="sdt">
+<label for="email"><b>Nhập địa chỉ</b></label><br>
+<input type="text" placeholder="Địa chỉ" name="dc" id="dc">
+<hr>
+<p>Để tạo tài khoản vui lòng đồng ý với điều khoản của chúng tôi <a href="#">Terms &amp; Privacy</a>.</p>
+<button type="submit" class="submit btn-outline-info">Đăng ký</button>
+</div>
+<div class="register login">
+<p>Bạn đã có tài khoản rồi? <a href="dangnhap.html">Đăng nhập</a>.</p>
+<a href="DUANCAPHE.html">Trở về trang chủ</a>
+</div>
+</form>
+</div>
+</div>
+</body>
+<script>
+function validate() {
+var u = document.getElementById("username").value;
+var p1 = document.getElementById("password").value;
+var p2 = document.getElementById("password-repeat").value;
+var p3 = document.getElementById("email").value;
+var p4 = document.getElementById("sdt").value;
+var p5 = document.getElementById("dc").value;
+  
+if(u== "") {
+alert("Vui lòng nhập tên!");
+return false;
+}
+if((p1 == "")|| (p1.length<6)) {
+alert("Vui lòng nhập mật khẩu!");
+return false;
+}
+if(p2 == "" || p2 != p1) {
+alert("Không xác minh được mật khẩu!");
+return false;
+}
+if( (p3.length<3) || (p3.indexOf("@")==-1) || (p3.indexOf(".")==-1)){
+ alert("Vui lòng nhập lại mail!");
+return false};
+
+ if((p4 == "")|| (p4.length<10) || (isNaN(p4)==true)) {
+alert("Số điện thoại không hợp lệ!");
+return false; 
+};
+ if(p5 == "") {
+alert("Địa chỉ không hợp lệ");
+return false;
+};
+if(p5 =! ""){
+alert("bạn đã đăng ký thành công");
+
+}return window.open('DUANCAPHE.html','_self');
+}
+</script>
+
+</html>

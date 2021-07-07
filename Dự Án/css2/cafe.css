@@ -1,0 +1,167 @@
+
+
+
+.gioithieu1{
+	background-image: url(../images/gt1.jpg);
+	height: 540px;
+	color: white;
+	padding-top: 100px;
+	text-align: center;
+	padding-right: 350px;
+	padding-left: 350px;
+
+}
+.hoido{
+	color: #a9593c;
+}
+.gioithieu2{
+	height:1800px;
+	color: #777;
+	
+}
+.gioithieu2 hr{
+	height: 3px;
+	width: 5%;
+	background-color:  #777;
+}
+.gioithieu2 p{
+	text-align: center;
+	padding-top: 30px;
+	padding-right: 200px;
+	padding-left: 200px;
+
+}
+.gioithieu2 a{
+	text-decoration: none;
+	color: #777;
+}
+.gioithieu2 a:hover{
+	color: red;
+}
+.gioithieu2 .card-columns .card img{
+	height: 450px;
+	width: 360px;
+	padding-left: 70px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.lienhe{
+	padding-left: 150px;
+}
+.lienhe .col-md-4 img{
+	height: 70%;
+	width: 70%;
+
+}
+.gioithieu2 .zoomanh{
+	padding-left: 560px;
+	padding-top: 20px;
+}
+.giacong{
+	margin-top: 50px;
+	padding-left: 150px;
+	padding-right: 150px;
+	color: #777
+}
+.giacong2 a{
+	text-decoration: none;
+	color: #777;
+}
+.giacong2 a:hover{
+	color: red;
+}
+.giacong2 h4{
+	text-align: center;
+}
+.giacong .table{
+	text-align: center;
+}
+.giacong3 .card-columns .card img{
+	height: 300px;
+	width: 300px;
+	padding-left: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.nhansong{
+	padding-left: 150px;
+	padding-right: 150px;
+	color: #777;
+	margin-top: 50px;
+}
+.nhansong2 a{
+	text-decoration: none;
+	color: #777;
+}
+.nhansong2 a:hover{
+	color: red;
+}
+.nhansong2 h4{
+	text-align: center;
+}
+
+.h {
+  text-align: center;
+  padding: 32px;
+}
+
+.nhansong3 {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /*hiển thị theo chiều ngang theo mặt định(direction: row)*/
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+ .nhansong3 .column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+.nhansong3 .column img {
+  margin-top: 8px;
+  width: 650px;
+  height: 400px;
+}
+
+/* Style the buttons */
+ .h.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.h .btn:hover {
+  background-color: #ddd;
+}
+
+.filter_grayscale {     
+    -webkit-filter: grayscale(1);    
+    filter: grayscale(1); 
+}
+.sanpham2 .card-columns .card img{
+	height: 300px;
+	width: 390px;
+	
+}
+.sanpham2 .card-columns .card{
+margin-bottom: 20px;
+background-color: #333333;
+
+}
+.sanpham2 {
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-top:30px;
+	background-color: #333333;
+}
+.sanpham1{
+	background-image: url(../img/nensp.png);
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	padding-top: 100px;
+	color: #ed8c38;
+}

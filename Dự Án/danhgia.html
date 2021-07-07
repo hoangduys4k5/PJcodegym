@@ -1,0 +1,111 @@
+<html class="no-js" lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Hệ Thống Đánh Giá Đơn Giản - Init HTML</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+ <style type="text/css">
+    body{
+        background-image: url("img/nendn.png");
+    }
+ 	div.stars {
+        margin-top: 350px;
+        color: blue;
+        margin-left: 600px;
+    }
+ 
+	a.star {
+    	font-size: 24px;
+    	color: #f0f1f4;
+    	cursor: pointer;
+    	line-height: 1;
+    	transition: all 0.1s ease;
+	}
+
+	a.star.vote-hover {
+    	color: #ed8c38;
+	}
+
+	a.star:active {
+    	color: #ed8c38;
+	}
+
+	a.star.vote-active {
+    	color: #0faef1;
+	}
+
+	.blue {
+		color: #0faef1;
+	}
+    #vote-desc{
+        margin-left: 50px;
+        font-size: 20px;
+        color: white;
+    }
+ </style>
+</head>
+<body>
+<div id="cate-rating" class="cate-rating">
+	<div class="stars">
+		<a id="star-1" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-2" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-3" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-4" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-5" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-6" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-7" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-8" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-9" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<a id="star-10" class="star"><span class="glyphicon glyphicon-star"></span></a>
+		<p id="vote-desc">Mời bạn cho điểm!</p>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+	 	 * Hiệu ứng khi rê chuột lên ngôi sao
+	 	 */
+    	$('a.star').mouseenter(function() {
+            if ($('#cate-rating').hasClass('rating-ok') == false) {
+                var eID = $(this).attr('id');
+                eID = eID.split('-').splice(-1);
+                $('a.star').removeClass('vote-active');
+                for (var i = 1; i <= eID; i++) {
+                    $('#star-' + i).addClass('vote-hover');
+                }
+            }
+        }).mouseleave(function() {
+            if ($('#cate-rating').hasClass('rating-ok') == false) {
+                $('a.star').removeClass('vote-hover');
+            }
+        });
+
+        /*
+         * Sự kiện khi cho điểm
+         */
+        $('a.star').click(function() {
+            
+        	if ($('#cate-rating').hasClass('rating-ok') == false) {
+        		var eID = $(this).attr('id');
+            	eID = eID.split('-').splice(-1).toString();
+            	for (var i = 1; i <= eID; i++) {
+                	$('#star-' + i).addClass('vote-active');
+            	}
+            	$('p#vote-desc').html('<span class="blue">' + eID + ' (' + eID * 10 + '%)</span> &middot; ' + 1 + ' đánh giá');
+            	$('#cate-rating').addClass('rating-ok');
+        	}
+           
+            alert("Cảm ơn bạn đã đánh giá cho DCoffe");
+           setTimeout(function(){
+             window.location.replace("DUANCAPHE.html");
+            }, 1500);
+         
+        });
+
+    });
+</script>
+</body>
+</html>
